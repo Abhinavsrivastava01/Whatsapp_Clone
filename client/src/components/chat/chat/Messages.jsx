@@ -5,6 +5,8 @@ import { getMessages,newMessage } from "../../../service/api";
 import Footer from './Footer';
 import Message from "./Message";
 const Wrapper = styled(Box)`
+    // <img src="https://unsplash.com/photos/SEcbLFqs5rU"alt="">
+    //  background-image: url(${'https://unsplash.com/photos/ZZSdiJZWn1o'});
     background-image: url(${'https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'});
     background-size: 50%;
 `;
@@ -69,3 +71,4 @@ value={value}
      )
 }
 export default Messages;
+// background-image: url(${'https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'});

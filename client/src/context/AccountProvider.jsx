@@ -1,4 +1,4 @@
-import { createContext,useState } from 'react';
+import { createContext,useState ,useRef, useEffect} from 'react';
 export const AccountContext= createContext(null);
 
 
@@ -11,7 +11,7 @@ const AccountProvider=({children})=>{
            setAccount,
            person,
            setPerson
-
+          
           }}> 
           {children}
           </AccountContext.Provider>

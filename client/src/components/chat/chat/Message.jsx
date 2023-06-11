@@ -3,11 +3,11 @@ import{Box,Typography,styled} from '@mui/material'
 import { formatDate } from '../../../utils/common-utils';
 import { AccountContext } from '../../../context/AccountProvider';
 const Own = styled(Box)`
+    margin-left: auto;
     background: #dcf8c6;
     padding: 5px;
     max-width: 60%;
     width: fit-content;
-    margin-left: auto;
     display: flex;
     border-radius: 10px;
     word-break: break-word;
@@ -35,19 +35,18 @@ const Time = styled(Typography)`
 `;
 
 export const Message=({message})=>{
+    const {account}=useContext(AccountContext);
      return (
           <>{
-               AccountContext.sub===message.senderId?
-               <Own>
+               account.sub===message.senderId?
+        <Own>
              <Text>{message.text}</Text>
              <Time>{formatDate(message.createdAt)}</Time>
-
-          </Own>
+        </Own>
           :
           <Wrapper>
              <Text>{message.text}</Text>
              <Time>{formatDate(message.createdAt)}</Time>
-
           </Wrapper>
           }
           </>

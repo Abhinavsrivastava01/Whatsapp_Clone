@@ -3,6 +3,7 @@ import { useState, useEffect,useContext} from 'react';
 import { getUsers } from '../../../service/api';
 import { Box ,styled,Divider} from '@mui/material';
 import { AccountContext } from '../../../context/AccountProvider';
+
 //components
 import Conversation from './Conversation';
 const Component=styled(Box)`
@@ -32,9 +33,12 @@ const Conversations=({text})=>{
 users.map(user=>(
      user.sub!==account.sub&&
      <>
+     
      <Conversation user={user}/>
-     <StyledDivider/>
+      <StyledDivider/>
+     
      </>
+     
 ))
 }
 </Component>

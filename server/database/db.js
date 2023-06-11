@@ -2,7 +2,6 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv'
 `mongoose.set('strictQuery', true);`
 
-
 dotenv.config();
 
 const USERNAME=process.env.DB_USERNAME;

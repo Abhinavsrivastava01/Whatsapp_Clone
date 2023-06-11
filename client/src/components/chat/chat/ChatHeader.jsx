@@ -38,7 +38,8 @@ const ChatHeader=({person})=>{
           <Image src={person.picture}alt="dp"/>
      <Box>
     <Name>{person.name}</Name>
-    <Status>online</Status>
+<Typography>online </Typography>
+    {/* //<Status>online</Status> */}
          </Box>
          <RightContainer>
           <Search/>

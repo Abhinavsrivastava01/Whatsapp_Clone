@@ -2,8 +2,8 @@ import Conversation from "../model/Conversation.js";
 
 export const newConversation=async(request,response)=>{
      try{
-          let senderId = request.body.senderId;
-          let receiverId = request.body.receiverId;
+          const senderId = request.body.senderId;
+          const receiverId = request.body.receiverId;
           const exist = await Conversation.findOne({ members: { $all: [receiverId, senderId]  }})
           if(exist) {
                return response.status(200).json('conversation already exists');
@@ -20,8 +20,8 @@ export const newConversation=async(request,response)=>{
      }
 }
 export const getConversation = async (request, response) => {
-     try { let senderId = request.body.senderId;
-          let receiverId = request.body.receiverId;
+     try { const senderId = request.body.senderId;
+          const receiverId = request.body.receiverId;
          let conversation = await Conversation.findOne({ members: { $all: [ request.body.senderId, request.body.receiverId] }});
          response.status(200).json(conversation);
      } catch (error) {
